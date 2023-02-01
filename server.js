@@ -14,7 +14,7 @@ const args = minimist(process.argv.slice(2));
 
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
-const port = args['port'] || 3000;
+const port = args.port || 3000;
 
 
 // Use the fs module to create an arrow function using `fs.readFile`.
@@ -28,7 +28,7 @@ fs.readFile('./public/index.html', 'utf8', (err, result) => {
 		return;
 	}
 	data = result;
-})
+});
 
 
 
@@ -46,9 +46,10 @@ fs.readFile('./public/index.html', 'utf8', (err, result) => {
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req, res) => {
-	res.writeHead(200, {'Content-Type': 'text/html'});
+	res.statusCode = 200;
+	res.setHeader(200, {'Content-Type': 'text/html'});
 	res.end(data);
-})
+});
 
 
 
