@@ -28,7 +28,7 @@ fs.readFile('./public/index.html', (err, result) => {
 		return;
 	}
 	data = result;
-}
+})
 
 
 
