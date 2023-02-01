@@ -1,0 +1,31 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "very simple server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a01-sjiang13.git"
+  },
+  "keywords": [
+    "web",
+    "server",
+    "node",
+    "port",
+    "fs",
+    "args",
+    "http"
+  ],
+  "author": "@sjiang13",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a01-sjiang13/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a01-sjiang13#readme",
+  "dependencies": {
+    "minimist": "^1.2.7"
+  }
+}
