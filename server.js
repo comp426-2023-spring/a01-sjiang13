@@ -22,7 +22,7 @@ const port = args['port'] || 3000;
 // The function must read a file located at `./public/index.html` and do some stuff with it.
 // The stuff that should be inside this function is all below.
 var data;
-fs.readFile('./public/index.html', (err, result) => {
+fs.readFile('./public/index.html', 'utf8', (err, result) => {
 	if (err) {
 		console.error(err);
 		return;
